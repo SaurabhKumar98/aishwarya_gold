@@ -1,8 +1,8 @@
 class AppUrl{
-  static const String localUrl="http://192.168.0.171:8000";
+  // static const String localUrl="http://192.168.0.171:8000";
 
   //hosted
-  //  static const String localUrl ="https://api.aishwaryagold.shop";
+   static const String localUrl ="https://api.aishwaryagold.shop";
   //auth screen
   static const String loginUrl="$localUrl/user/send-otp";
   static const String otpverfUrl ="$localUrl/user/verify-otp";

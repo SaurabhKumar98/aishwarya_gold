@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+
+	<!-- Flutter / App Info -->
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -24,10 +28,18 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+
+	<!-- UI -->
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>UIStatusBarStyle</key>
+	<string></string>
+
+	<!-- Orientation -->
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -41,49 +53,61 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
 
-	<!-- Network -->
+	<!-- ================= PERMISSIONS ================= -->
+
+	<!-- Face ID (local_auth) -->
+	<key>NSFaceIDUsageDescription</key>
+	<string>Use Face ID to authenticate securely</string>
+
+	<!-- 🔐 Location Permissions -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app requires your location to provide personalized experiences and nearby services.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We use your location to improve app functionality even when running in the background.</string>
+
+	<!-- 📷 Camera Permission -->
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires camera access to capture photos or videos for your profile or posts.</string>
+
+	<!-- 🖼️ Photo Library / Gallery Permission -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs photo library access to upload images and videos.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app needs permission to save photos or videos to your gallery.</string>
+
+	<!-- 💾 File Access -->
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>This app uses your documents folder to select or save files.</string>
+
+	<!-- 📡 Network Permissions (Firebase / Razorpay APIs) -->
 	<key>NSAppTransportSecurity</key>
 	<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
 
-<!-- Location -->
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app uses your location to show nearby stores and services.</string>
+	<!-- 🔔 Notifications (Firebase Messaging) -->
+	<key>NSUserNotificationUsageDescription</key>
+	<string>This app uses notifications to keep you updated about new messages and alerts.</string>
 
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This app uses your location to enhance map and service experience.</string>
-
-<!-- Camera -->
-	<key>NSCameraUsageDescription</key>
-	<string>Camera access is required for scanning and uploading documents.</string>
-
-<!-- Photos -->
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Photo library access is required to upload images.</string>
-
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Allow access to save images to your photo library.</string>
-
-<!-- WebView -->
-	<key>io.flutter.embedded_views_preview</key>
-	<true/>
-
-<!-- Firebase -->
+	<!-- ✅ REQUIRED for Firebase Initialization -->
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<true/>
 
-<!-- Background -->
+	<!-- ✅ Optional: If using background messaging -->
 	<key>UIBackgroundModes</key>
 	<array>
-    	<string>fetch</string>
-    	<string>remote-notification</string>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+
+	<!-- URL Launcher -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>tel</string>
+		<string>mailto</string>
+		<string>https</string>
 	</array>
 
 </dict>
