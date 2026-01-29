@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "816552313567",
+    "project_id": "aishwarya-gold",
+    "storage_bucket": "aishwarya-gold.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816552313567:android:72fbeadc21c7dc83899f6a",
+        "android_client_info": {
+          "package_name": "com.app.aishwarya_gold"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNfo0NjXEPmEbXzPm0BDQBmey2hQgMPt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

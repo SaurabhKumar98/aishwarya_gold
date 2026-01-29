@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBKYm-cTAoTHytkK3_5i1Oct6W7mXWjM04</string>
+	<key>GCM_SENDER_ID</key>
+	<string>816552313567</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.aishwaryagold.app</string>
+	<key>PROJECT_ID</key>
+	<string>aishwarya-gold</string>
+	<key>STORAGE_BUCKET</key>
+	<string>aishwarya-gold.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:816552313567:ios:12eca6c2ae9ea312899f6a</string>
+</dict>
+</plist>
