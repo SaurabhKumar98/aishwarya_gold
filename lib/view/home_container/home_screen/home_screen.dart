@@ -1094,51 +1094,51 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   const SizedBox(height: 20),
 
                   // // 3 Identical Cards – 100% Dynamic from API
-                  // SizedBox(
-                  //   height: 220,
-                  //   child: Consumer<VideoProvider>(
-                  //     builder: (context, videoProvider, child) {
-                  //       // Loading state
-                  //       if (videoProvider.isLoading) {
-                  //         return _buildLoadingCards();
-                  //       }
+                  SizedBox(
+                    height: 220,
+                    child: Consumer<VideoProvider>(
+                      builder: (context, videoProvider, child) {
+                        // Loading state
+                        if (videoProvider.isLoading) {
+                          return _buildLoadingCards();
+                        }
 
-                  //       // Find first active video
-                  //       final activeVideo = videoProvider.videoList
-                  //           .cast<Datum?>()
-                  //           .firstWhere(
-                  //             (v) => v?.isActive == true,
-                  //             orElse: () => null,
-                  //           );
+                        // Find first active video
+                        final activeVideo = videoProvider.videoList
+                            .cast<Datum?>()
+                            .firstWhere(
+                              (v) => v?.isActive == true,
+                              orElse: () => null,
+                            );
 
-                  //       // If no video found → show placeholder cards
+                        // If no video found → show placeholder cards
 
-                  //       if (activeVideo == null || activeVideo.url.isEmpty) {
-                  //         return _buildNoVideoPlaceholder();
-                  //       }
+                        if (activeVideo == null || activeVideo.url.isEmpty) {
+                          return _buildNoVideoPlaceholder();
+                        }
 
-                  //       // Success: Use the same video for all 3 cards
-                  //       return ListView(
-                  //         scrollDirection: Axis.horizontal,
-                  //         padding: const EdgeInsets.symmetric(horizontal: 10),
-                  //         children: [
-                  //           _enhancedLearnCard(
-                  //             title: activeVideo.title,
-                  //             videoUrl: activeVideo.url,
-                  //           ),
-                  //           _enhancedLearnCard(
-                  //             title: activeVideo.title,
-                  //             videoUrl: activeVideo.url,
-                  //           ),
-                  //           _enhancedLearnCard(
-                  //             title: activeVideo.title,
-                  //             videoUrl: activeVideo.url,
-                  //           ),
-                  //         ],
-                  //       );
-                  //     },
-                  //   ),
-                  // ),
+                        // Success: Use the same video for all 3 cards
+                        return ListView(
+                          scrollDirection: Axis.horizontal,
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          children: [
+                            _enhancedLearnCard(
+                              title: activeVideo.title,
+                              videoUrl: activeVideo.url,
+                            ),
+                            _enhancedLearnCard(
+                              title: activeVideo.title,
+                              videoUrl: activeVideo.url,
+                            ),
+                            _enhancedLearnCard(
+                              title: activeVideo.title,
+                              videoUrl: activeVideo.url,
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
